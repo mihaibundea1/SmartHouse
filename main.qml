@@ -16,7 +16,7 @@ ApplicationWindow {
         width: parent.width
         height: parent.height / 6
         visible: true
-                color: "black"
+        color: "black"
 
         anchors{
             bottom: parent.bottom
@@ -44,13 +44,21 @@ ApplicationWindow {
 
             Text{
                 id: temperatureString
-                text:temperatureVal.toString()
+                text:temperatureVal
                 font.family: "OpenSans"
                 anchors.verticalCenter: parent.verticalCenter
                 minimumPixelSize: 18
                 font.pointSize: 20
                 fontSizeMode: Text.Fit
                 color: "white"
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked:
+                    {
+                        var popup1 = popUpTemperature;
+                        popup1.open();
+                    }
+                }
             }
 
             Image {
@@ -70,4 +78,31 @@ ApplicationWindow {
             }
         }
     }
+
+    Popup
+    {
+        id: popUpTemperature
+        x: parent.x + parent.width/10
+        y: parent.y + parent.height/10
+        width: parent.width/3
+        height: parent.height/2
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnPressOutside
+        BorderImage {
+            id: name
+            source: "qrc:/icons/temperature/arrowDown.ico"
+            width: 100; height: 100
+            border.left: 5; border.top: 5
+            border.right: 5; border.bottom: 5
+        }
+        Rectangle
+        {
+            anchors.fill: parent
+            color:"black"
+            radius: 10
+        }
+
+    }
+
 }
