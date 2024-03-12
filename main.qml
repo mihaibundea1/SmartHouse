@@ -9,46 +9,64 @@ ApplicationWindow {
     visible: true
     title: qsTr("SmartHouse")
 
+    property real temperatureVal: 20.00
+
     Rectangle{
         id: blackRectangle
         width: parent.width
-        height: parent.height / 5
+        height: parent.height / 6
         visible: true
-                color: "white"
+                color: "black"
 
         anchors{
             bottom: parent.bottom
         }
 
-        Column{
-            anchors.left: parent.left
-            anchors.leftMargin: 30
+        Row{
+            anchors.bottom: parent.bottom
+            anchors.verticalCenter: parent.verticalCenter
             Image {
-                id: arrowUp
-                height: blackRectangle.height/2
-                width: blackRectangle.height/2
-                anchors.horizontalCenter: parent.horizontalCenter
+                id: arrowLeft
+                height: blackRectangle.height
+                width: blackRectangle.height
+                anchors.verticalCenter: parent.verticalCenter
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/icons/temperature/arrowUp.ico"
+                source: "qrc:/icons/temperature/arrowLeftWhite.ico"
+                MouseArea
+                {
+                    anchors.fill: parent;
+                    onClicked: {
+                        temperatureVal = temperatureVal - 0.5;
+                        console.log("apasat");
+                    }
+                }
             }
 
             Text{
-                text:"20"
+                id: temperatureString
+                text:temperatureVal.toString()
                 font.family: "OpenSans"
-                anchors.horizontalCenter: parent.horizontalCenter
-                minimumPixelSize: 14
-                font.pointSize: 18
+                anchors.verticalCenter: parent.verticalCenter
+                minimumPixelSize: 18
+                font.pointSize: 20
                 fontSizeMode: Text.Fit
-                color: "black"
+                color: "white"
             }
 
             Image {
-                id: arrowDown
-                height: blackRectangle.height/2
-                width: blackRectangle.height/2
-                anchors.horizontalCenter: parent.horizontalCenter
+                id: arrow
+                height: blackRectangle.height
+                width: blackRectangle.height
+                anchors.verticalCenter: parent.verticalCenter
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/icons/temperature/arrowDown.ico"
+                source: "qrc:/icons/temperature/arrowRightWhite.ico"
+                MouseArea
+                {
+                    anchors.fill: parent
+                    onClicked: {
+                        temperatureVal = temperatureVal+ 0.5
+                    }
+                }
             }
         }
     }
