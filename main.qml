@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls 2.15
 import QtQuick.Layouts
+import QtQuick.Controls
 
 ApplicationWindow {
     width: 640
@@ -11,25 +12,43 @@ ApplicationWindow {
     Rectangle{
         id: blackRectangle
         width: parent.width
-        height: parent.height / 7
+        height: parent.height / 5
         visible: true
-        color: "black"
+                color: "white"
 
         anchors{
             bottom: parent.bottom
         }
 
-        Row
-        {
-            spacing: 100
-            anchors.bottom: parent
-            Button
-            {
-                id:appsButton
-                height: blackRectangle.height
-                width: blackRectangle.width / 5
+        Column{
+            anchors.left: parent.left
+            anchors.leftMargin: 30
+            Image {
+                id: arrowUp
+                height: blackRectangle.height/2
+                width: blackRectangle.height/2
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/icons/temperature/arrowUp.ico"
+            }
 
+            Text{
+                text:"20"
+                font.family: "OpenSans"
+                anchors.horizontalCenter: parent.horizontalCenter
+                minimumPixelSize: 14
+                font.pointSize: 18
+                fontSizeMode: Text.Fit
+                color: "black"
+            }
 
+            Image {
+                id: arrowDown
+                height: blackRectangle.height/2
+                width: blackRectangle.height/2
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/icons/temperature/arrowDown.ico"
             }
         }
     }

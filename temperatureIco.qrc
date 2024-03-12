@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>icons/temperature/arrowUp.ico</file>
+     <file>icons/temperature/arrowDown.ico</file>
+ </qresource>
+ </RCC>
