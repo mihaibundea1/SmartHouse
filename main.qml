@@ -12,7 +12,6 @@ ApplicationWindow {
     height: 720
     visible: true
     title: qsTr("SmartHouse")
-    color:"blue"
 
     BottomBar{
         id: bottomBar

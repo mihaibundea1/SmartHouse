@@ -64,10 +64,9 @@ Rectangle{
                     {
                         var popup1 = Qt.createComponent("qrc:/ui/PopUps/PopUpTemperature.qml");
                         popup2 = popup1.createObject(mainWindow, {"parent" : mainWindow});
-                        popup2.x = parent.x+parent.width/20;
-                        popup2.y = parent.y+parent.height/20;
+                        popup2.leftMargin = mainWindow.width/30;
+                        popup2.topMargin = mainWindow.height/20;
                         popup2.open();
-
                     }
                 }
             }
