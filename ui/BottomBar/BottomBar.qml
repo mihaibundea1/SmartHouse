@@ -3,10 +3,13 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import "qrc:/ui/PopUps"
+
 
 Rectangle{
     property real temperatureVal: 20.00
-    property var popup2
+    property string typeOfTemperature: "°C"
+    property string temperature: temperatureVal + typeOfTemperature
 
     id: blackRectangle
     width: parent.width
@@ -20,7 +23,7 @@ Rectangle{
 
 
     Row{
-        spacing: parent.width/35
+        spacing: parent.width/18 //720/30
         width: parent.width
         anchors.bottom: parent.bottom
         anchors.verticalCenter: parent.verticalCenter
@@ -30,6 +33,7 @@ Rectangle{
             height: parent.height
             color:"transparent"
             anchors.verticalCenter: parent.verticalCenter
+            anchors.leftMargin: blackRectangle.width/30
             Image {
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectFit
@@ -39,7 +43,6 @@ Rectangle{
                     anchors.fill: parent;
                     onClicked: {
                         temperatureVal = temperatureVal - 0.5;
-                        console.log("apasat");
                     }
                 }
             }
@@ -53,7 +56,7 @@ Rectangle{
             color:"transparent"
             Text{
                 anchors.centerIn:parent
-                text:temperatureVal
+                text:temperature
                 font.family: "OpenSans"
                 minimumPixelSize: 18
                 font.pointSize: 20
@@ -63,11 +66,9 @@ Rectangle{
                     anchors.fill: parent
                     onClicked:
                     {
-                        var popup1 = Qt.createComponent("qrc:/ui/PopUps/PopUpTemperature.qml");
-                        popup2 = popup1.createObject(mainWindow, {"parent" : mainWindow});
-                        popup2.leftMargin = mainWindow.width/30;
-                        popup2.topMargin = mainWindow.height/20;
-                        popup2.open();
+                        popUpTemperature.leftMargin = mainWindow.width/30;
+                        popUpTemperature.topMargin = mainWindow.height/2;
+                        popUpTemperature.open();
                     }
                 }
             }

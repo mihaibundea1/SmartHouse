@@ -9,5 +9,7 @@
         <file>icons/temperature/temperaturePopUp.svg</file>
         <file>icons/temperature/temperaturePopUp_400_500px.svg</file>
         <file>icons/temperature/BrightnessImage.svg</file>
+        <file>icons/temperature/arrowRightBlack.svg</file>
+        <file>icons/temperature/arrowRightBlack.ico</file>
     </qresource>
 </RCC>

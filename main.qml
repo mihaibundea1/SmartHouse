@@ -18,4 +18,8 @@ ApplicationWindow {
         id: bottomBar
     }
 
+    PopUpTemperature{
+        id: popUpTemperature
+    }
+
 }
