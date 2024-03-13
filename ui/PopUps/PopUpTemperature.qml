@@ -4,19 +4,26 @@ import QtQuick.Controls
 
 Popup
 {
+    property real backdropOpacity: .5
+
     id: popUpTemperature
 
-    modal: true
+//    modal: true
+    dim: true
     focus: true
-
     background: Image
     {
         source: "qrc:/icons/temperature/temperaturePopUp_400_500px.svg"
     }
 
+    Overlay.modeless: Rectangle {
+        id: backdropDim
+        color: "#33000000" //transparent dim
+        anchors.fill: parent
+    }
+
     enter: Transition {
         NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: 100}
-
         PropertyAnimation {
             target: popUpTemperature
             properties: "scale"

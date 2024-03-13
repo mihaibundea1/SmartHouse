@@ -18,6 +18,7 @@ Rectangle{
         bottom: parent.bottom
     }
 
+
     Row{
         spacing: parent.width/35
         width: parent.width
