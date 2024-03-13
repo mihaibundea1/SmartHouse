@@ -3,5 +3,6 @@
         <file>ui/BottomBar/BottomBar.qml</file>
         <file>ui/PopUps/PopUpTemperature.qml</file>
         <file>ui/Formats/ImageContainer.qml</file>
+        <file>ui/Slider/CircularSlider.qml</file>
     </qresource>
 </RCC>
