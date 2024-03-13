@@ -6,5 +6,7 @@
         <file>icons/temperature/arrowUpWhite.ico</file>
         <file>icons/temperature/arrowLeftWhite.ico</file>
         <file>icons/temperature/arrowRightWhite.ico</file>
+        <file>icons/temperature/temperaturePopUp.svg</file>
+        <file>icons/temperature/temperaturePopUp_400_500px.svg</file>
     </qresource>
 </RCC>

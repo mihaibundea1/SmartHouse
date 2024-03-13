@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/BottomBar/BottomBar.qml</file>
+        <file>ui/PopUps/PopUpTemperature.qml</file>
+        <file>ui/Formats/ImageContainer.qml</file>
+    </qresource>
+</RCC>
