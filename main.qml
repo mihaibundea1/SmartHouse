@@ -48,69 +48,6 @@ ApplicationWindow {
 
                     color: "green"
                 }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "green"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
-                Rectangle{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "red"
-
-                    color: "green"
-                }
             }
         }
         //        Flickable {
@@ -144,5 +81,4 @@ ApplicationWindow {
     PopUpTemperature{
         id: popUpTemperature
     }
-
 }
