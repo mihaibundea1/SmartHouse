@@ -6,6 +6,7 @@ import "qrc:/ui/BottomBar"
 import "qrc:/ui/Formats"
 import "qrc:/ui/PopUps"
 import "qrc:/ui/Slider"
+import "qrc:/ui/MainFrame"
 
 ApplicationWindow {
     id: mainWindow
@@ -31,48 +32,85 @@ ApplicationWindow {
             contentHeight: height
             interactive: true
             clip: true
+            antialiasing: true
 
             RowLayout {
                 id: firstRow
-                width: parent.width
+                width: 2000
                 height: flickableFirstRow.height
                 spacing: 20
+                RoomObject{
+                    implicitWidth : 200
+                    implicitHeight: 200
+                    radius: 200
+                    border.width: 1
+                    border.color: "black"
+
+                    color: "green"
+                }
                 Rectangle{
                     implicitWidth : 200
                     implicitHeight: 200
                     radius: 200
+                    border.width: 1
+                    border.color: "green"
 
-                    color: "black"
+                    color: "green"
                 }
-                CircularSlider{
+                Rectangle{
                     implicitWidth : 200
                     implicitHeight: 200
-                    progressColor: "green"
-                    startAngle: 30
-                    endAngle: 330
-                    value: 0.5
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
 
-                    handleRadius: 35
-                    handleHeight: 35
-                    handleWidth: 35
-
-                    handleColor: "black"
+                    color: "green"
                 }
-                CircularSlider{
+                Rectangle{
                     implicitWidth : 200
                     implicitHeight: 200
-                    progressColor: "orange"
-                    startAngle: 30
-                    endAngle: 330
-                    value: 0.5
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
 
-                    handleRadius: 35
-                    handleHeight: 35
-                    handleWidth: 35
-
-                    handleColor: "black"
+                    color: "green"
                 }
+                Rectangle{
+                    implicitWidth : 200
+                    implicitHeight: 200
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
 
+                    color: "green"
+                }
+                Rectangle{
+                    implicitWidth : 200
+                    implicitHeight: 200
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
+
+                    color: "green"
+                }
+                Rectangle{
+                    implicitWidth : 200
+                    implicitHeight: 200
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
+
+                    color: "green"
+                }
+                Rectangle{
+                    implicitWidth : 200
+                    implicitHeight: 200
+                    radius: 200
+                    border.width: 1
+                    border.color: "red"
+
+                    color: "green"
+                }
             }
         }
         //        Flickable {

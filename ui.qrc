@@ -4,5 +4,6 @@
         <file>ui/PopUps/PopUpTemperature.qml</file>
         <file>ui/Formats/ImageContainer.qml</file>
         <file>ui/Slider/CircularSlider.qml</file>
+        <file>ui/MainFrame/RoomObject.qml</file>
     </qresource>
 </RCC>
