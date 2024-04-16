@@ -5,5 +5,6 @@
         <file>ui/Formats/ImageContainer.qml</file>
         <file>ui/Slider/CircularSlider.qml</file>
         <file>ui/MainFrame/RoomObject.qml</file>
+        <file>ui/MainFrame/AddNewRoom.qml</file>
     </qresource>
 </RCC>

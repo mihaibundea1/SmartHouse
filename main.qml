@@ -8,7 +8,8 @@ import "qrc:/ui/PopUps"
 import "qrc:/ui/Slider"
 import "qrc:/ui/MainFrame"
 
-ApplicationWindow {
+ApplicationWindow
+{
     id: mainWindow
     width: 1280
     height: 720
@@ -24,7 +25,8 @@ ApplicationWindow {
         height: parent.height - bottomBar.height
         anchors.leftMargin: parent.width / 30
 
-        Flickable {
+        Flickable
+        {
             id: flickableFirstRow
             width: parent.width
             height: columnLayout.height / 3
@@ -34,22 +36,54 @@ ApplicationWindow {
             clip: true
             antialiasing: true
 
-            RowLayout {
+
+            Row {
                 id: firstRow
                 width: 2000
                 height: flickableFirstRow.height
-                spacing: 20
-                RoomObject{
-                    implicitWidth : 200
-                    implicitHeight: 200
-                    radius: 200
-                    border.width: 1
-                    border.color: "black"
+                spacing: 5
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
 
-                    color: "green"
+                ListModel {
+                    id: firstRowList
+                }
+
+                Repeater {
+                    model: firstRowList
+
+                    delegate:
+                        RoomObject{
+                        implicitWidth : 200
+                        implicitHeight: 200
+                        radius: 200
+                        border.width: 1
+                        border.color: "black"
+                        color: "green"
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                AddNewRoom{
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    MouseArea{
+                        anchors.fill: parent
+                        //        onClicked: {
+                        //            console.log("apasat adaugare camera");
+                        //        }
+                        onClicked: {
+                            firstRowList.insert(0, {"item": "item"});
+                        }
+                    }
                 }
             }
         }
+
+
+
         //        Flickable {
         //            id: flickableSecondRow
         //            width: parent.width
