@@ -4,10 +4,14 @@ import QtQuick.Controls 2.12
 Rectangle {
     implicitWidth: 200
     implicitHeight: 200
-    radius: 200
-    border.width: 1
-    border.color: "black"
-    color: "green"
+    color: "transparent"
+
+    Image {
+        anchors.centerIn: parent
+        width: parent.width/2
+        height: parent.height/2
+        source: "qrc:/icons/HomeButton/HouseBlack.png"
+    }
 
     Popup {
         id: popup
@@ -15,12 +19,56 @@ Rectangle {
         height: 200
         modal: true
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+        background: Image
+        {
+            source: "qrc:/icons/temperature/temperaturePopUp_400_500px.svg"
+        }
         Rectangle {
-            color: "white"
+            color: "transparent"
             anchors.fill: parent
             Text {
                 text: "This is a popup"
                 anchors.centerIn: parent
+            }
+        }
+        Overlay.modeless: Rectangle {
+            id: backdropDim
+            color: "#33000000" //transparent dim
+        }
+
+        enter: Transition {
+            NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: 100}
+            PropertyAnimation {
+                target: popUpTemperature
+                properties: "scale"
+                from: 1.0
+                to: .99
+                duration: 50
+            }
+            PropertyAnimation {
+                target: popUpTemperature
+                properties: "scale"
+                from: .99
+                to: 1.
+                duration: 50
+            }
+        }
+        exit: Transition {
+            NumberAnimation { property: "opacity"; from: 1.; to: 0.; duration: 200}
+
+            PropertyAnimation {
+                target: popUpTemperature
+                properties: "scale"
+                from: 1.0
+                to: 1.01
+                duration: 200
+            }
+            PropertyAnimation {
+                target: popUpTemperature
+                properties: "scale"
+                from: 1.01
+                to: 0.99
+                duration: 200
             }
         }
     }
@@ -29,5 +77,7 @@ Rectangle {
         anchors.fill: parent
         onClicked: popup.open()
     }
+
+
 }
 

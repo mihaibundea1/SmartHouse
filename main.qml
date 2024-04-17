@@ -56,12 +56,6 @@ ApplicationWindow
 
                     delegate:
                         RoomObject{
-                        implicitWidth : 200
-                        implicitHeight: 200
-                        radius: 200
-                        border.width: 1
-                        border.color: "black"
-                        color: "green"
                         anchors.verticalCenter: parent.verticalCenter
                     }
                 }
@@ -71,9 +65,7 @@ ApplicationWindow
 
                     MouseArea{
                         anchors.fill: parent
-                        //        onClicked: {
-                        //            console.log("apasat adaugare camera");
-                        //        }
+
                         onClicked: {
                             firstRowList.insert(0, {"item": "item"});
                         }
@@ -81,25 +73,6 @@ ApplicationWindow
                 }
             }
         }
-
-
-
-        //        Flickable {
-        //            id: flickableSecondRow
-        //            width: parent.width
-        //            height: columnLayout.height / 3
-        //            contentWidth: flickableSecondRow.width
-        //            contentHeight: height
-        //            interactive: true
-        //            clip: true
-        //            RowLayout {
-        //                id: secondRow
-        //                width: flickableSecondRow.width
-        //                height: flickableSecondRow.height
-        //                spacing: parent.width/20
-        //            }
-        //        }
-
         Row {
             id: thirdRow
             Layout.fillWidth: true

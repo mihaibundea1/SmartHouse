@@ -13,5 +13,7 @@
         <file>icons/MainFrameIco/addIcon.png</file>
         <file>icons/MainFrameIco/addIconWhite.png</file>
         <file>icons/temperature/arrowRightBlack.ico</file>
+        <file>icons/HomeButton/HouseBlack.png</file>
+        <file>icons/HomeButton/HouseWhite.png</file>
     </qresource>
 </RCC>
