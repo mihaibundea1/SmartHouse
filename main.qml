@@ -65,7 +65,9 @@ ApplicationWindow
 
                 AddNewRoom{
                     anchors.verticalCenter: parent.verticalCenter
-
+                    // o idee buna ar fi sa am un PopUp care sa imi permita configurarea
+                    // camerei intr un anumit mod, Camere de filmat, senzori, iconita
+                    // de afisare a camerei in meniu, un nume, etc.. (adaugare a mai multor idei)
                     MouseArea{
                         anchors.fill: parent
 
