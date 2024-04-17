@@ -57,6 +57,9 @@ ApplicationWindow
                     delegate:
                         RoomObject{
                         anchors.verticalCenter: parent.verticalCenter
+                        // trebuie sa fac aici o clasa de popup in folder-ul
+                        // PopUps dedicata exclusiv pentru RoomObject astfel
+                        // incat poate fi pozitionata la mijlocul MainWindow
                     }
                 }
 

@@ -15,8 +15,8 @@ Rectangle {
 
     Popup {
         id: popup
-        width: 200
-        height: 200
+        width: 500
+        height: 500
         modal: true
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
         background: Image
@@ -24,8 +24,8 @@ Rectangle {
             source: "qrc:/icons/temperature/temperaturePopUp_400_500px.svg"
         }
         Rectangle {
-            color: "transparent"
-            anchors.fill: parent
+            color: "grey"
+            anchors.centerIn: parent
             Text {
                 text: "This is a popup"
                 anchors.centerIn: parent
